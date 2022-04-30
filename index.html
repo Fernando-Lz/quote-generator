@@ -20,8 +20,30 @@
     <link rel="stylesheet" href="style.css" />
     <title>Quote Generator</title>
   </head>
+
   <body>
-    <p>HOLA</p>
+    <main class="quote-container" id="quote-container">
+      <!-- Quote -->
+      <div class="quote-text">
+        <blockquote id="quote">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </blockquote>
+      </div>
+
+      <!-- Author -->
+      <div class="quote-author">
+        <p id="author">Example</p>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons-container">
+        <button class="twitter-btn" id="twitter" title="Tweet This!">
+          <i class="fab fa-twitter"></i>
+        </button>
+        <button id="new-quote">New Quote</button>
+      </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
