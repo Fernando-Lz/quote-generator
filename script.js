@@ -10,18 +10,18 @@ const loaderElem = document.getElementById('loader');
 
 // Functions
 
-const loading = () => {
+const showLoadingSpinner = () => {
   loaderElem.hidden = false;
   quoteContainer.hidden = true;
 };
 
-const loadingComplete = () => {
+const removeLoadingSpinner = () => {
   loaderElem.hidden = true;
   quoteContainer.hidden = false;
 };
 
 const newQuote = () => {
-  loading();
+  showLoadingSpinner();
   const randomNumber = Math.floor(Math.random() * apiQuotes.length);
   const quote = apiQuotes[randomNumber];
 
@@ -39,10 +39,10 @@ const newQuote = () => {
   }
   quoteTextElem.textContent = quote.text;
 
-  loadingComplete();
+  removeLoadingSpinner();
 };
 const getQuotes = async () => {
-  loading();
+  showLoadingSpinner();
   try {
     // Value will be asigned only when the fetch ends
     const response = await fetch(apiUrl);
